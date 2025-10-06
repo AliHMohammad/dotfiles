@@ -1,6 +1,21 @@
 # =========================================
 # === Enable plugins and init oh-my-zsh ===
 # =========================================
+# Use powerline
+USE_POWERLINE="true"
+# Has weird character width
+# Example:
+#    is not a diamond
+HAS_WIDECHARS="false"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 ZSH_THEME=""
@@ -30,18 +45,13 @@ export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/usr/local/go/bin"
-export PATH="$PATH:$HOME/bin/google-cloud-sdk/bin"
-export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
 
 # ===================================
 # === Setup Application specifics ===
 # ===================================
-export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"     # 1password ssh agent
-export EDITOR=/usr/bin/vim                             # default editor
-eval "$(direnv hook zsh)"                              # direnv hook
-
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-if [ -f "$HOME/bin/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/bin/google-cloud-sdk/path.zsh.inc"; fi             # Updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/bin/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/bin/google-cloud-sdk/completion.zsh.inc"; fi # Enables shell command completion for gcloud.
+export EDITOR="/usr/bin/nano"                          # default editor
 
 eval "$(starship init zsh)"
+
+# SSH Agent
+eval `keychain --eval id_ed25519`

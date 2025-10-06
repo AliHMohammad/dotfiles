@@ -8,8 +8,6 @@ curl
 dagger
 direnv
 docker
-docker-buildx
-docker-compose
 exa
 fd
 file
@@ -19,7 +17,6 @@ git
 helm
 iwd
 jq
-kubectx
 otf-firamono-nerd
 pre-commit
 procps-ng
@@ -36,4 +33,3 @@ wget
 yay
 zsh
 zstd
-superfile

@@ -75,7 +75,6 @@ This repository contains configuration files and scripts to set up a development
 ## Customizations
 - **ZSH**: Includes aliases, keybindings, and plugins for enhanced shell experience.
 - **Git**: Configured with aliases, signing keys, and credential storage.
-- **Kitty**: Customized terminal with the Nord theme.
 - **Starship**: Configured prompt with a custom format and color palette.
 - **GNOME**: Extensions and keybindings for workspace management and productivity.
 

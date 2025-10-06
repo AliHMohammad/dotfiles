@@ -1,25 +1,16 @@
-[user]
-	email = azv@techchapter.com
-	name = andreasvikke
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIIga+4ccYxARCCnv9TR9k/SpDIFZJeMMvEQq4CQk/aM
-[includeIf "gitdir:~/Documents/av/"]
-	path = ~/Documents/av/.gitconfig
-[includeIf "gitdir:~/Documents/konolico/"]
-	path = ~/Documents/konolico/.gitconfig
-[includeIf "gitdir:~/Documents/ufst/"]
-	path = ~/Documents/ufst/.gitconfig
 [gpg]
 	format = ssh
-[gpg "ssh"]
-  program = "/opt/1Password/op-ssh-sign"
+[user]
+	signingkey = /home/alihm/.ssh/id_ed25519
+	email = alihmohammad@hotmail.com
+	name = Ali Mohammad
 [commit]
 	gpgsign = true
-[credential]
-	helper = store
+[push]
+	autoSetupRemote = true
 [core]
 	excludesfile = ~/.gitignore
-	editor = vim
-	pager = less -FRSX
+	editor = nano
 [color]
     branch = auto
     diff = auto
@@ -34,19 +25,4 @@
 	f = fetch
 	pu = push
 	puf = push --force-with-lease
-	main-branch = "!git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4"
-	branch-name = "!git rev-parse --abbrev-ref HEAD"
-	pub = "!git push -u origin $(git branch-name)"
-	subpull = submodule update --init --checkout --recursive
-	wipr = for-each-ref --sort='committerdate:iso8601' --format=' %(color:yellow)%(committerdate:relative)%09%(color:white)%(refname:short)' refs/remotes/origin
-    wip = for-each-ref --sort='committerdate:iso8601' --format=' %(color:yellow)%(committerdate:relative)%09%(color:white)%(refname:short)' refs/heads/
 	ls = log --oneline
-[filter "tabspace"]
-	clean = expand --tabs=4 --initial
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[rerere]
-	enabled = true
