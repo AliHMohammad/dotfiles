@@ -48,9 +48,6 @@ if [ "$install" ]; then
   sudo ufw default deny incoming
   sudo ufw default allow outgoing
 
-  sudo mkdir -p /etc/docker
-  echo '{"iptables":false}' | sudo tee /etc/docker/daemon.json
-
   echo "Installation Complete!"
 fi
 

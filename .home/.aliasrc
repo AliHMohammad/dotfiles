@@ -7,10 +7,9 @@
 # === Helpers ===
 # ===============
 alias c='clear'
-alias ls='ls -A'
-# alias ls='exa -la'
 alias open="xdg-open"
-alias gt=gnome-terminal
+alias gt=kgx
+alias ls=exa
 
 # ================
 # === Programs ===
