@@ -16,7 +16,7 @@ if [ "$install" ]; then
     sudo pacman-mirrors --geoip && sudo pacman -Syyu --noconfirm
     # Install necessary packages for repositories
     sudo pacman -S --needed --noconfirm - <./.extra/req.pacman
-    # yay -S --needed --noconfirm - <./.extra/req.aur
+    yay -S --needed --noconfirm - <./.extra/req.aur
   else
     echo "Unsupported distro: $distro"
     exit 1

@@ -6,7 +6,6 @@ btop
 ca-certificates
 curl
 dagger
-direnv
 docker
 exa
 fd

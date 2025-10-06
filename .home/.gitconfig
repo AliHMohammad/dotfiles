@@ -9,7 +9,6 @@
 [push]
 	autoSetupRemote = true
 [core]
-	excludesfile = ~/.gitignore
 	editor = nano
 [color]
     branch = auto
