@@ -7,6 +7,8 @@ ca-certificates
 curl
 dagger
 docker
+docker-buildx
+docker-compose
 exa
 fd
 file
@@ -35,3 +37,6 @@ zstd
 wmctrl
 npm
 nmap
+dotnet-runtime
+dotnet-sdk
+aspnet-runtime
